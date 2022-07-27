@@ -2,7 +2,8 @@
 pragma solidity ^0.8.7;
 
 contract Modifier {
-    //execute 'inherit.sol' file to find the issue. 
+    // execute 'inherit.sol' file to find the issue. 
+    // Always declare 'owner' vairables as 'private', so other contracts can't access the 'owner variable'
     address public owner;
 
     constructor() {
