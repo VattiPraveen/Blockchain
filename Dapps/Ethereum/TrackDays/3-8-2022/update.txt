@@ -1,0 +1,3 @@
+Gone through ERC20 smart contract (https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+Reading Hardhat documentation.
+Workked on Assessment 4(assignment from sessions).
