@@ -183,6 +183,43 @@
       "artifacts": [
         "Context"
       ]
+    },
+    "C:\\Users\\vatti\\OneDrive\\Desktop\\GitProjects\\Blockchain\\Dapps\\Ethereum\\hardhat-token\\contracts\\Token.sol": {
+      "lastModificationDate": 1659615797632,
+      "contentHash": "0410dbf012ebd8bd6aea9c96da661ab1",
+      "sourceName": "contracts/Token.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.9"
+      ],
+      "artifacts": [
+        "Token"
+      ]
     }
   }
 }
