@@ -1,0 +1,119 @@
+vatti@DESKTOP-S8MKG06 MINGW64 ~/OneDrive/Desktop/Rapid innovation/Session tasks/Auction
+$ node getEvents.js 
+All highest bid logs:
+ [
+  {
+    address: '0x000eb06FA8d61792108C35C87527EE65c0FCD752',
+    blockHash: '0x5dfd83694fafa1d7032b9a55c9e555e18e77ecf3e2733d69ab9fb8e1b4dfbc9d',
+    blockNumber: 12744250,
+    logIndex: 7,
+    removed: false,
+    transactionHash: '0xe4f79dadc9e340c904063c3d6763ef6a90c801d701c27d339f51d3191d6d1b01',
+    transactionIndex: 11,
+    id: 'log_641087e9',
+    returnValues: Result {
+      '0': '0x1f42480815Ad685BEFeb8de19ACe38D22EB262bc',
+      '1': '5000',
+      bidder: '0x1f42480815Ad685BEFeb8de19ACe38D22EB262bc',
+      amount: '5000'
+    },
+    event: 'highestBidIncreased',
+    signature: '0xd8f1dcefca138e7252b01cd1477fab84d8763d9b0c50b16805e3190c1c393a34',
+    raw: {
+      data: '0x0000000000000000000000000000000000000000000000000000000000001388',
+      topics: [Array]
+    }
+  },
+  {
+    address: '0x000eb06FA8d61792108C35C87527EE65c0FCD752',
+    blockHash: '0xa55913ec0370bfb3351e16da4e832b0e54cce0da29dce30ba0bbe1e59ba011f9',
+    blockNumber: 12744272,
+    logIndex: 0,
+    removed: false,
+    transactionHash: '0x2cc6957c3f9ece0beeb42691d06321b74f000cbbadde0dd9f8b12fe8e15d0945',
+    transactionIndex: 2,
+    id: 'log_b5610ace',
+    returnValues: Result {
+      '0': '0x6269474B9e9B6884ebF5Be2dd2F47037c0a29Eac',
+      '1': '10000',
+      bidder: '0x6269474B9e9B6884ebF5Be2dd2F47037c0a29Eac',
+      amount: '10000'
+    },
+    event: 'highestBidIncreased',
+    signature: '0xd8f1dcefca138e7252b01cd1477fab84d8763d9b0c50b16805e3190c1c393a34',
+    raw: {
+      data: '0x0000000000000000000000000000000000000000000000000000000000002710',
+      topics: [Array]
+    }
+  }
+]
+
+####################################
+####################################
+
+
+All returning bid logs:
+ []
+
+####################################
+####################################
+
+
+Alert: Auction ended
+ [
+  {
+    address: '0x000eb06FA8d61792108C35C87527EE65c0FCD752',
+    blockHash: '0x7d6e471a0fbe49de4b463269f715483e9b39c390cac8112352bac3b46b7da552',
+    blockNumber: 12744297,
+    logIndex: 14,
+    removed: false,
+    transactionHash: '0x63bffd4dc7871a18bdea8adc49a735e71d021bff1f6c6dfc36f201240b272fe6',
+    transactionIndex: 10,
+    id: 'log_021d227f',
+    returnValues: Result {
+      '0': '0x6269474B9e9B6884ebF5Be2dd2F47037c0a29Eac',
+      '1': '10000',
+      winner: '0x6269474B9e9B6884ebF5Be2dd2F47037c0a29Eac',
+      amount: '10000'
+    },
+    event: 'auctionEnded',
+    signature: '0x6e0e2174dbf7b77c08b6f9a2799b9feda84a6d54a5644864582040100a47d4c5',
+    raw: {
+      data: '0x0000000000000000000000000000000000000000000000000000000000002710',
+      topics: [Array]
+    }
+  }
+]
+
+####################################
+####################################
+
+
+Final withdraws
+ [
+  {
+    address: '0x000eb06FA8d61792108C35C87527EE65c0FCD752',
+    blockHash: '0x0c002c766190ccc5ab6c38573416545dc96330948fe123a911d0892881867b1f',
+    blockNumber: 12744303,
+    logIndex: 30,
+    removed: false,
+    transactionHash: '0xf2650091b0321b2fa2e8d3864296d32d40c9f11cdac991002093d4fb1b02b10f',
+    transactionIndex: 15,
+    id: 'log_4590c016',
+    returnValues: Result {
+      '0': '0x1f42480815Ad685BEFeb8de19ACe38D22EB262bc',
+      '1': '5000',
+      bidder: '0x1f42480815Ad685BEFeb8de19ACe38D22EB262bc',
+      amount: '5000'
+    },
+    event: 'withdrawnAmount',
+    signature: '0x8905bb6961c17bfc059d712a8d1f8108dab52c5d37e8a00eaa9f48c42c5d9d32',
+    raw: {
+      data: '0x0000000000000000000000000000000000000000000000000000000000001388',
+      topics: [Array]
+    }
+  }
+]
+
+####################################
+####################################
