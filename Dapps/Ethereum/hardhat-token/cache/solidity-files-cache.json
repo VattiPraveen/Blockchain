@@ -185,8 +185,8 @@
       ]
     },
     "C:\\Users\\vatti\\OneDrive\\Desktop\\GitProjects\\Blockchain\\Dapps\\Ethereum\\hardhat-token\\contracts\\Token.sol": {
-      "lastModificationDate": 1659615797632,
-      "contentHash": "0410dbf012ebd8bd6aea9c96da661ab1",
+      "lastModificationDate": 1659955719933,
+      "contentHash": "a9f4f9de91f6ec6396603d4c399c1365",
       "sourceName": "contracts/Token.sol",
       "solcConfig": {
         "version": "0.8.9",
