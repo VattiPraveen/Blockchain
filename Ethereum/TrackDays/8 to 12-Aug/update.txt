@@ -1,0 +1,2 @@
+Learnt about ERC-721 standard for NFT creation and transactions.
+Worked on hardhat-NFT sample project and created test cases.
