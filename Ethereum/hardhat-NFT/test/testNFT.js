@@ -41,4 +41,19 @@ describe("NFT contract", function () {
         expect(await hardhatNFT.ownerOf(nft1)).to.equal(owner.address);
     });
     
+    it("This should fail because owner doesnt posses nft", async function () {
+        
+        await hardhatNFT.connect(owner).transf(owner.address, addr1.address, nft1);
+
+        expect(await hardhatNFT.ownerOf(nft1)).to.equal(owner.address);
+    });
+
+    it("This should fail because the nft is burnt", async function () {
+        
+        await hardhatNFT.connect(addr1).burnn(nft1);
+
+        expect(await hardhatNFT.balanceOf(addr1)).to.equal(1);
+    });
+
+
 });

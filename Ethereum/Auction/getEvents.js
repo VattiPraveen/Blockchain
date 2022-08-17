@@ -9,7 +9,7 @@ const contractABI = [{"inputs":[{"internalType":"uint256","name":"_biddingTime",
 
 const electionContract = new web3.eth.Contract(contractABI, contractAddress)
 
-electionContract.getPastEvents('highestBidIncreased',{
+electionContract.getPastEvents('allEvents',{
     filter: {from: myAddress},
     fromBlock: 12685536,
     toBlock: 'latest'
@@ -17,7 +17,7 @@ electionContract.getPastEvents('highestBidIncreased',{
 events,
 "\n\n####################################\n####################################\n\n")})
 
-
+/*
 
 electionContract.getPastEvents('returnPrevBidAmt',{
     filter: {from: myAddress},
@@ -42,3 +42,6 @@ electionContract.getPastEvents('withdrawnAmount',{
 }, function(err, events){console.log("Final withdraws\n",
 events,
 "\n\n####################################\n####################################\n\n")})
+
+*/
+
