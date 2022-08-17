@@ -443,9 +443,9 @@ const contractABI = [
 ]
 const electionContract = new web3.eth.Contract(contractABI, contractAddress)
 
-electionContract.getPastEvents('allEvents',{
-    filter: {from: myAddress},
-    fromBlock: 12805980,
+electionContract.getPastEvents('Transfer',{
+    //filter: {from: myAddress},
+    fromBlock: 0,
     toBlock: 'latest'
 }, function(err, events){console.log("Event logs:\n",
 events,
