@@ -1,0 +1,2 @@
+worked on exchange system where 20 tokens are spend to get an NFT.
+Learnt about using interfaces to communicate with original smart contract without importing.
