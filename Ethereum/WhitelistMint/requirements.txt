@@ -1,0 +1,7 @@
+create a ERC1155 contract which will have following functionality
+1)  minting NFTs in batch
+2)  Only whitelisted addresses can mint NFts
+3)  Owner of the contract can whitelist those addresses
+4)  one address can only mint atmost 5 NFT
+5)  For each NFT , price is 0.2 ETH
+6)  So if user is minting 5 then user needs to pay 0.2*5 => 1 eth
