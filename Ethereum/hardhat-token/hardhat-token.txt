@@ -1,0 +1,2 @@
+Write basic smart contracts for ERC20, ERC721 standards.
+Write few test cases to check if the smart contract functions are working fine or not.

@@ -1,0 +1,2 @@
+Write contract for exchanging 20 tokens for 1 NFT.
+Do not import and inherit. Use interfaces of ERC20 and ERC721 instead.
