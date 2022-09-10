@@ -11,14 +11,16 @@ const provider = new ethers.providers.JsonRpcProvider();
 
 async function main() {
   //const [owner, addr1, addr2] = await ethers.getSigners();
-  const Liquidity = await hre.ethers.getContractFactory("Liquidity");
-  const liquidity = await Liquidity.deploy();
+  const UniswapV2Router02 = await hre.ethers.getContractFactory("UniswapV2Router02");
+  const factoryAdd = "0xE3A045A384Dc13fe10EB6dD063231e17949Bc020";
+  const wethAdd = "0xbF093dF8993524FCdDA644381aB979c08d7B9407";
+  const uniswapV2Router02 = await UniswapV2Router02.deploy(factoryAdd, wethAdd);
 
-  await liquidity.deployed();
+  await uniswapV2Router02.deployed();
   //const liqContract = new ethers.Contract(uniswapV2Router02.address, uniswapV2Router02.abi, provider);
 
 
-  console.log("uUniswapV2Router02 contract address: ", liquidity.address);
+  console.log("uUniswapV2Router02 contract address: ", uniswapV2Router02.address);
 
 }
 

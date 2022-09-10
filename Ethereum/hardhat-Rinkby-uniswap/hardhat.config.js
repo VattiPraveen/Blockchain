@@ -1,16 +1,15 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("@nomiclabs/hardhat-etherscan");
 
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   defaultNetwork: "hardhat",
-    networks: {
-        hardhat: {
-          //allowUnlimitedContractSize: true,
-          gas: 2100000,
-          gasPrice: 8000 // whatever you want here
-        },
+  networks: {
+    hardhat: {
+
     },
+  },
   solidity: {
     compilers: [
       {

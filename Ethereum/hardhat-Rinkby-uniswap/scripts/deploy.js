@@ -5,21 +5,24 @@
 // will compile your contracts, add the Hardhat Runtime Environment's members to the
 // global scope, and execute the script.
 const hre = require("hardhat");
-var ethers = require('ethers');
-const provider = new ethers.providers.JsonRpcProvider();
-
 
 async function main() {
-  //const [owner, addr1, addr2] = await ethers.getSigners();
-  const Liquidity = await hre.ethers.getContractFactory("Liquidity");
-  const liquidity = await Liquidity.deploy();
+  const [owner, addr1, addr2] = await ethers.getSigners();
 
-  await liquidity.deployed();
-  //const liqContract = new ethers.Contract(uniswapV2Router02.address, uniswapV2Router02.abi, provider);
+  const TOKENA = await hre.ethers.getContractFactory("TokenA");
+  const tokenA = await TOKENA.deploy();
+
+  await tokenA.deployed();
+
+  console.log("TokenA contract address: ", tokenA.address);
 
 
-  console.log("uUniswapV2Router02 contract address: ", liquidity.address);
+  const TOKENB = await hre.ethers.getContractFactory("TokenB");
+  const tokenB = await TOKENB.deploy();
 
+  await tokenB.deployed();
+
+  console.log("TokenB contract address: ", tokenB.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

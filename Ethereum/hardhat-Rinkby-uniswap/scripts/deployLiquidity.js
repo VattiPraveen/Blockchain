@@ -18,7 +18,7 @@ async function main() {
   //const liqContract = new ethers.Contract(uniswapV2Router02.address, uniswapV2Router02.abi, provider);
 
 
-  console.log("uUniswapV2Router02 contract address: ", liquidity.address);
+  console.log("Liquidity contract address: ", liquidity.address);
 
 }
 
