@@ -8,7 +8,7 @@ describe("Staking contract", function () {
 
   var hardhatStake;
 
-    it("Deployment should assign the total supply of tokens to the owner", async function () {
+    it("1) Deployment should assign the total supply of tokens to the owner", async function () {
 
         [owner, addr1, addr2] = await ethers.getSigners();
         Stake = await ethers.getContractFactory("StakingToken");
@@ -19,7 +19,7 @@ describe("Staking contract", function () {
         expect(await hardhatStake.totalSupply()).to.equal(ownerBalance);
     });
 
-    it("Create stake should add stake of user", async function () {
+    it("2) Create stake should add stake of user", async function () {
 
       var stakeValue = 10000;
       //console.log(await hardhatStake.balanceOf(owner.address));
@@ -30,7 +30,7 @@ describe("Staking contract", function () {
       expect(await hardhatStake.stakeOf(addr1.address)).to.equal(stakeValue);
   });
 
-  it("Calculate reward should equal estimated reward", async function () {
+  it("3) Calculate reward should equal estimated reward", async function () {
 
     var stakeValue = 10000;
     var reward = stakeValue/100;
@@ -39,7 +39,7 @@ describe("Staking contract", function () {
     expect(await hardhatStake.calculateReward(addr1.address)).to.equal(reward);
   });
 
-  it("This withdrawal should fail as owner hasn't distributed rewards.", async function () {
+  it("4) This withdrawal should fail as owner hasn't distributed rewards.", async function () {
 
     var stakeValue = 10000;
     var reward = stakeValue/100;
@@ -49,7 +49,7 @@ describe("Staking contract", function () {
     expect(await hardhatStake.balanceOf(addr1.address)).to.equal(reward);
   });
 
-  it("After distribution, Withdrawal of reward should reflect taoken balance of the user.", async function () {
+  it("5) After distribution, Withdrawal of reward should reflect token balance of the user.", async function () {
 
     var stakeValue = 10000;
     var reward = stakeValue/100;
