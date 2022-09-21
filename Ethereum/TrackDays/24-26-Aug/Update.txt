@@ -1,0 +1,2 @@
+Created exchange contraact of 1 NFT for 20 Tokens.
+Created contract to mint NFTs in batch using ERC1155 standard.

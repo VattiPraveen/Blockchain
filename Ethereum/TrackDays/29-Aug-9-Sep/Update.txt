@@ -1,0 +1,2 @@
+Read about DeFi, DEX and AMMs etc.
+Worked around Uniswap and tried to implement the test cases in local hardhat network(after forking Rinkbey testnet).

@@ -372,6 +372,8 @@ contract Liquidity {
         uint indexed liquidity
     );
 
+    event getReservesAB(uint indexed reserveA, uint indexed reserveB);
+
     constructor() public {
         owner = msg.sender;
     }
@@ -381,6 +383,40 @@ contract Liquidity {
 
     address factoryV2 = v2Router.factory();
     address pairAdd;
+
+    function getReservesExactIn(address tokenA, address tokenB)
+        public
+        returns (uint reserveA, uint reserveB)
+    {
+        updatePairAdd(tokenA, tokenB);
+        (reserveA, reserveB, ) = IUniswapV2Pair(pairAdd).getReserves();
+        emit getReservesAB(reserveA, reserveB);
+    }
+
+    function swapToken(
+        uint amountIn,
+        uint amountOutMin,
+        address[] memory path,
+        address to,
+        uint deadline
+    ) public returns (uint[] memory amounts) {
+        require(
+            IERC20(path[0]).transferFrom(msg.sender, address(this), amountIn),
+            "transferFrom failed."
+        );
+        require(
+            IERC20(path[0]).approve(address(v2Router), amountIn),
+            "approve failed."
+        );
+
+        v2Router.swapExactTokensForTokens(
+            amountIn,
+            amountOutMin,
+            path,
+            to,
+            deadline
+        );
+    }
 
     function getLiquidityFromPair(address pairA, address _of)
         public
