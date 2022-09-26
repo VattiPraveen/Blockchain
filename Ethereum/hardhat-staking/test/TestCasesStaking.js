@@ -61,6 +61,24 @@ describe("Staking contract", function () {
     expect(await hardhatStake.balanceOf(addr1.address)).to.equal(reward);
   });
 
+  it("6) Check add stakeholder function", async function () {
+
+    var length = await hardhatStake.stakeholdersLength();
+
+    await hardhatStake.addStakeholder(addr2.address);
+
+    expect(await hardhatStake.stakeholdersLength()).to.equal(parseInt(length) + 1);
+  });
+
+  it("7) Check remove stakeholder function", async function () {
+
+    await hardhatStake.removeStakeholder(addr2.address);
+
+    var [isStakeholder, value] = await hardhatStake.isStakeholder(addr2.address)
+
+    expect(isStakeholder).to.equal(false);
+  });
+
 
 
 });

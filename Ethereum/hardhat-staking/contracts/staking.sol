@@ -17,6 +17,11 @@ contract StakingToken is ERC20, Ownable {
     mapping(address => uint256) internal stakes;
     mapping(address => uint256) internal rewards;
 
+    function stakeholdersLength() public view returns (uint) {
+        uint length = stakeholders.length;
+        return length;
+    }
+
     function isStakeholder(address _address)
         public
         view
