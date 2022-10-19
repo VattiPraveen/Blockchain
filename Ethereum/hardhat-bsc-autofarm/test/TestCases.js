@@ -13,6 +13,12 @@ describe("Uniswap test contract", function () {
     Autofarm = await ethers.getContractFactory("Farm");
     hardhatAutofarm = await Autofarm.deploy();
 
+    //var autoFarmAddress = "0x0895196562C7868C5Be92459FaE7f877ED450452";
+
+    const autoFarmAddress = "0x0895196562C7868C5Be92459FaE7f877ED450452";
+    const autoFarmContract = await hre.ethers.getContractAt("AutoFarmV2", autoFarmAddress);
+
+
     
     var autoOwner = await hardhatAutofarm.getOwner();
 
@@ -21,11 +27,19 @@ describe("Uniswap test contract", function () {
 
     //console.log(autoOwner);
 
-    var allocValue = await hardhatAutofarm.getAlloc(56);
+    var allocValue = await autoFarmContract.poolInfo(56);
+
+    console.log(allocValue);
+    var pid = 56;
+    var allocpoint = 1000;
+    var booleanVal = true;
+    var tx = await autoFarmContract.connect(impersonatedSigner).set(pid, allocpoint, booleanVal);
+    const reciept2 = await tx.wait();
+
+    allocValue = await autoFarmContract.poolInfo(56);
 
     console.log(allocValue);
 
-    
 
 
 
