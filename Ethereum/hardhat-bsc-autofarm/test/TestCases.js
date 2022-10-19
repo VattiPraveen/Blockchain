@@ -25,7 +25,7 @@ describe("Uniswap test contract", function () {
     await helpers.impersonateAccount(autoOwner);
     const impersonatedSigner = await ethers.getSigner(autoOwner);
 
-    //console.log(autoOwner);
+    console.log(impersonatedSigner);
 
     var allocValue = await autoFarmContract.poolInfo(56);
 
@@ -39,8 +39,6 @@ describe("Uniswap test contract", function () {
     allocValue = await autoFarmContract.poolInfo(56);
 
     console.log(allocValue);
-
-
 
 
     //expect(await hardhatAutofarm).to.equal(liquidityValue);
