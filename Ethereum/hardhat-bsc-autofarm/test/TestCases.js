@@ -32,7 +32,7 @@ describe("Uniswap test contract", function () {
     console.log(allocValue);
     var pid = 56;
     var allocpoint = 1000;
-    var booleanVal = true;
+    var booleanVal = false;
     var tx = await autoFarmContract.connect(impersonatedSigner).set(pid, allocpoint, booleanVal);
     const reciept2 = await tx.wait();
 
